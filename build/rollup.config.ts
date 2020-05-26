@@ -7,6 +7,7 @@ export default {
   input: join(__dirname, '../index.ts'),
   output: [
     {
+      format: 'cjs',
       file: join(__dirname, '../dist/dockctl.js')
     }
   ],
