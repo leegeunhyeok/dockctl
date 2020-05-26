@@ -1,3 +1,3 @@
-# Dockit
+# dockctl
 
 WIP

@@ -1,16 +1,24 @@
 {
-  "name": "dockit",
+  "name": "dockctl",
   "version": "0.0.0",
-  "description": "Docker management kit",
+  "description": "Docker management cli",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "dockit": "./index.js"
+    "dockctl": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leegeunhyeok/dockctl.git"
   },
   "author": "Geunhyeok LEE <dev.ghlee@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leegeunhyeok/dockctl/issues"
+  },
+  "homepage": "https://github.com/leegeunhyeok/dockctl#readme",
   "dependencies": {
     "chalk": "^4.0.0",
     "figlet": "^1.4.0",
