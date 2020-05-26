@@ -8,7 +8,7 @@
     "build": "rollup --config build/rollup.config.ts"
   },
   "bin": {
-    "dockctl": "./dist/index.js"
+    "dockctl": "./dist/dockctl.js"
   },
   "engines": {
     "node": ">=10.3.0"
