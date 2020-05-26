@@ -1,0 +1,1 @@
+// docker version -f '{{json .Client.DefaultAPIVersion}}'
