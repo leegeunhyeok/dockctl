@@ -26,6 +26,7 @@ module.exports = {
     'prefer-const': 'error',
     'array-bracket-spacing': 'error',
     'semi': ['error', 'always'],
-    'quotes': ['error', 'single']
+    'quotes': ['error', 'single'],
+    '@typescript-eslint/no-unused-vars': [2, { args: 'none' }]
   }
 };
