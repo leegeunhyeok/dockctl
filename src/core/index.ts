@@ -1,5 +1,5 @@
-import cmd from './cmd';
+import command from './command';
 
 export {
-  cmd
+  command
 };

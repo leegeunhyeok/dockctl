@@ -1,4 +1,4 @@
-import { CommandResponse } from './cmd';
+import { CommandResponse } from './command';
 
 export {
   CommandResponse

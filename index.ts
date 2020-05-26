@@ -1,3 +1,3 @@
-import cmd from './src/core/cmd';
+import { command } from './src/core';
 
-cmd('ls', ['-al']).then(({ data }) => console.log(data)).catch(console.error);
+command('ls', ['-al']).then(({ data }) => console.log(data)).catch(console.error);
