@@ -1,5 +1,3 @@
-const sample = (): void => {
-  console.log('Hello');
-}
+import cmd from './src/core/cmd';
 
-sample();
+cmd('ls', ['-al']).then(({ data }) => console.log(data)).catch(console.error);
