@@ -9,3 +9,11 @@ export const isJSON = (data: string): boolean | object => {
     return false;
   }
 };
+
+export const async = (fn: Function, ...args: Array<any>): Promise<any> => {
+  return new Promise((resolve) => {
+    fn(...args, (...res) => {
+      resolve([...res]);
+    });
+  });
+};
