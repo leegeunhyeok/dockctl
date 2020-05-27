@@ -6,28 +6,28 @@ WIP
 
 - General Info
   - [x] Docker Engine version
-  - [] Docker version
+  - [ ] Docker version
 - Images
-  - [] Search
-  - [] Pull
-  - [] Build
-  - [] Inspect
-  - [] List
-  - [] Remove
-  - [] Save
-  - [] Load
+  - [ ] Search
+  - [ ] Pull
+  - [ ] Build
+  - [ ] Inspect
+  - [ ] List
+  - [ ] Remove
+  - [ ] Save
+  - [ ] Load
 - Containers
-  - [] List
-  - [] Run
-  - [] Stop
-  - [] Remove
-  - [] Commit
+  - [ ] List
+  - [ ] Run
+  - [ ] Stop
+  - [ ] Remove
+  - [ ] Commit
 - Networks
-  - [] List
-  - [] Inspect
+  - [ ] List
+  - [ ] Inspect
 - Volumes
-  - [] List
-  - [] Inspect
+  - [ ] List
+  - [ ] Inspect
 - Other
   - Docker compose
   - Docker swarm
