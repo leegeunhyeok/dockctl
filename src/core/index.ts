@@ -1,5 +1,7 @@
 import command from './command';
+import co from './co';
 
 export {
-  command
+  command,
+  co
 };
