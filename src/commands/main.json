@@ -1,0 +1,31 @@
+{
+  "__MENU__": "MAIN",
+  "type": "list",
+  "title": "Select Menu",
+  "items": [
+    {
+      "name": "images",
+      "next": "IMAGES"
+    },
+    {
+      "name": "containers",
+      "next": "CONTAINERS"
+    },
+    {
+      "name": "networks",
+      "next": "NETWORKS"
+    },
+    {
+      "name": "volumes",
+      "next": "VOLUMES"
+    },
+    {
+      "name": "information",
+      "next": "INFO"
+    },
+    {
+      "name": "exit",
+      "next": "EXIT"
+    }
+  ]
+}
