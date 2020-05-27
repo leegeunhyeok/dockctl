@@ -6,7 +6,7 @@ import typescript from 'rollup-plugin-typescript';
 import license from 'rollup-plugin-license';
 
 export default {
-  input: join(__dirname, '../index.ts'),
+  input: join(__dirname, '../src/index.ts'),
   output: [
     {
       format: 'cjs',
