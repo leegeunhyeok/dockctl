@@ -1,10 +1,11 @@
 import { command } from './core';
+import { init } from './commands';
 import { async } from './utils';
 import figlet from 'figlet';
 import standard from 'figlet/importable-fonts/Standard.js';
 import { version } from '../package.json';
 
-export default async () => {
+export default async (): Promise<string> => {
   const renderTitle = async (apiVersion: string): Promise<void> => {
     figlet.parseFont('Standard', standard);
     const [err, data] = await async(figlet, 'Dockctl');
@@ -25,6 +26,13 @@ export default async () => {
     return code === 0 ? data.toString() : 'unknown';
   };
 
+  await init();
   const apiVersion = await getDockerAPIVersion();
+  if (apiVersion === 'unknown') {
+    console.error('Docker(unix:docker.sock) is running?');
+    process.exit(1);
+  }
+
   await renderTitle(apiVersion);
+  return apiVersion;
 };
