@@ -1,9 +1,9 @@
-import { ResponseDataType } from '../enums';
+import { CommandDataTypes } from '../enums';
 
-export type CommandResponseData = string | object;
+export type CommandData = string | object;
 
 export interface CommandResponse {
-  data: CommandResponseData,
-  type: ResponseDataType,
+  data: CommandData,
+  type: CommandDataTypes,
   code: number
 }

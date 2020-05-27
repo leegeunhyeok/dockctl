@@ -1,4 +1,4 @@
-export enum ResponseDataType {
+export enum CommandDataTypes {
   STRING,
   JSON
 }

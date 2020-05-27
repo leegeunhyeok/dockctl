@@ -1,6 +1,6 @@
 import { spawn } from 'child_process';
 import { CommandResponse } from '../interfaces';
-import { ResponseDataType } from '../enums';
+import { CommandDataTypes } from '../enums';
 
 import { isJSON } from '../utils';
 
@@ -30,17 +30,17 @@ export default (cmd: string, args: Array<string>): Promise<CommandResponse> => {
     const data = isJSON(out);
     return data ? {
       data,
-      type: ResponseDataType.JSON,
+      type: CommandDataTypes.JSON,
       code
     } : {
       data: out,
-      type: ResponseDataType.STRING,
+      type: CommandDataTypes.STRING,
       code
     };
   }).catch(({ err, code }) => {
     return {
       data: err,
-      type: ResponseDataType.STRING,
+      type: CommandDataTypes.STRING,
       code
     };
   });
