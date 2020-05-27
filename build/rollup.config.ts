@@ -1,6 +1,7 @@
 import { join } from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import json from '@rollup/plugin-json';
 import typescript from 'rollup-plugin-typescript';
 import license from 'rollup-plugin-license';
 
@@ -15,6 +16,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
+    json(),
     typescript(),
     license({
       banner: {
