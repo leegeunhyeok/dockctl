@@ -1,5 +1,4 @@
 import { command } from './core';
-import { init } from './commands';
 import { async } from './utils';
 import figlet from 'figlet';
 import standard from 'figlet/importable-fonts/Standard.js';
@@ -13,7 +12,7 @@ export default async (): Promise<string> => {
     if (!err) {
       console.log(data);
       console.log(`Dockctl v${version}`.padStart(34));
-      console.log(`Docker API Engine v${apiVersion}`.padStart(34));
+      console.log(`Docker API Engine v${apiVersion}\n`.padStart(34));
     }
   };
 
@@ -26,7 +25,6 @@ export default async (): Promise<string> => {
     return code === 0 ? data.toString() : 'unknown';
   };
 
-  await init();
   const apiVersion = await getDockerAPIVersion();
   if (apiVersion === 'unknown') {
     console.error('Docker(unix:docker.sock) is running?');

@@ -1,24 +1,15 @@
-import { readdir } from 'fs';
+import main from './main';
+import containers from './containers';
 import { DockctlMenu } from '../enums';
-const data = {};
 
-export const init = () => {
-  return new Promise((resolve) => {
-    readdir(__dirname, (err, files) => {
-      if (err) {
-        resolve(false);
-      }
+const commands = [
+  main,
+  containers
+];
 
-      files
-        .filter(x => ~x.indexOf('.json'))
-        .forEach(x => {
-          const jsonData = require(x);
-          data[DockctlMenu[jsonData.__MENU__]] = jsonData;
-        });
-
-      resolve(true);
-    });
-  });
-};
-
-export default data;
+export default (() => {
+  return commands.reduce((prev, curr) => {
+    prev[DockctlMenu[curr.__MENU__]] = curr;
+    return prev;
+  }, {});
+})();
