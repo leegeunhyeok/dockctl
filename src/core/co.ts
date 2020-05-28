@@ -1,9 +1,10 @@
+import { prompt } from '../core';
 import { DockctlSignal } from '../enums';
+import commands from '../commands';
 
-
-export default function* () {
+export default function* (ctx) {
   while (true) {
-    const ctx = yield 'sample';
+    yield prompt(ctx, commands[ctx.__NEXT__]);
     if (ctx.__SIGNAL__ === DockctlSignal.EXIT) {
       return;
     }
