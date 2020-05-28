@@ -17,3 +17,14 @@ export const async = (fn: Function, ...args: Array<any>): Promise<any> => {
     });
   });
 };
+
+export const generateAPICommand = (apiVersion, path) => {
+  return {
+    cmd: 'curl',
+    args: [
+      '--unix-socket',
+      '/var/run/docker.sock',
+      `http://localhost/v${apiVersion}${path}`
+    ]
+  };
+};
