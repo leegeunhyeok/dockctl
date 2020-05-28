@@ -16,5 +16,7 @@ export enum DockctlMenu {
   IMAGES,
   CONTAINERS,
   NETWORKS,
-  VOLUMES
+  VOLUMES,
+  INFO,
+  EXIT
 }
